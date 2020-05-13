@@ -1,0 +1,4 @@
+package m151.webshop.backend.repo;
+
+public interface UserRepo {
+}
