@@ -1,4 +1,4 @@
-package M151.webshop.backend;
+package m151.webshop.backend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
