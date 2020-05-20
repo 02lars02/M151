@@ -1,5 +1,11 @@
 # M151
 
+- [Projektbeschrieb](#projektbeschrieb)
+   - [Persona](#persona)
+   - [User Stories](#user-stories)
+   - [Technologien](#technologien)
+ - [Installation](#installation)
+
 ## Projektbeschrieb
 Das Ziel dieses Projekts, ist das Erstellen eines Webshops für verschiedene Produkte. Die Produkte können dabei von unterschiedlichen Produktgruppen kommen.
 
@@ -31,3 +37,18 @@ Als Verkäufer möchte ich Produkte löschen, dass diese nicht mehr verfügbar s
 - Spring Boot
 - Postgresql
 - Angular
+
+## Installation
+~ = repository root folder
+
+### Datenbank
+Ordner: ~/backend/docker
+```
+docker-compose up
+```
+
+### Backend
+Ordner: ~/backend
+```
+./gradlew bootRun
+```
