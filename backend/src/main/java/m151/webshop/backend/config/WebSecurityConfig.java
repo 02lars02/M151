@@ -24,9 +24,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.httpBasic().and().authorizeRequests()
-                .antMatchers("/api/user/register").permitAll()
-                .antMatchers("/api/**").authenticated().and()
+        http.httpBasic().and().authorizeRequests() //
+                .antMatchers("/api/user/**", "/api/product/all", "/api/product/info/**").permitAll() //
+                .antMatchers("/api/**").authenticated().and() //
                 .cors().disable().csrf().disable();
     }
 
