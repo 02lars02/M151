@@ -22,4 +22,12 @@ public class ProductController {
     public Product getInfo(@PathVariable int id) {
         return productService.getInfo(id);
     }
+
+    @PostMapping("/add")
+    public void add(@RequestBody Product fruit) {
+        productService.add(fruit);
+    }
+
+    @GetMapping("/delete/{id}")
+    public void delete(@PathVariable int id) { productService.delete(id); }
 }

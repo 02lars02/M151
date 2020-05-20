@@ -6,9 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.StreamSupport;
 
 @Service
 @Transactional
@@ -18,8 +17,14 @@ public class ProductService {
 
     public List<Product> getAll() {
         Iterable<Product> products = productRepo.findAll();
-        return StreamSupport.stream(products.spliterator(), false).collect(Collectors.toList());
+        List<Product> productsList = new ArrayList<>();
+        products.forEach(productsList::add);
+        return productsList;
     }
 
     public Product getInfo(int id) { return productRepo.findById(id); }
+
+    public void add(Product fruit) { productRepo.save(fruit); }
+
+    public void delete(int id) { productRepo.deleteById(id); }
 }
