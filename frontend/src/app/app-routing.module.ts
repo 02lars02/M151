@@ -8,13 +8,13 @@ import { RegisterComponent } from './register/register.component';
 const routes: Routes = [
   { path: '', component: OverviewComponent },
   { path: 'product/:id', component: DetailComponent },
-  { path: 'login', component: LoginComponent},
-  { path: 'register', component: RegisterComponent},
-  { path: '**', redirectTo: '' }
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: '**', redirectTo: '' },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

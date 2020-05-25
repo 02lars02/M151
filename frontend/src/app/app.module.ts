@@ -16,14 +16,10 @@ import { AuthenticationService } from 'src/auth/AuthenticationService';
     OverviewComponent,
     DetailComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [AuthenticationService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

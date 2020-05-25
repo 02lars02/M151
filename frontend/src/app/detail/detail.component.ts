@@ -8,16 +8,16 @@ import { Observable } from 'rxjs';
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',
-  styleUrls: ['./detail.component.css']
+  styleUrls: ['./detail.component.css'],
 })
 export class DetailComponent implements OnInit {
   id: string;
   product: Product = new Product();
 
-  constructor(private route: ActivatedRoute, private httpClient: HttpClient) { }
+  constructor(private route: ActivatedRoute, private httpClient: HttpClient) {}
 
   ngOnInit() {
-    this.route.params.subscribe(params => {
+    this.route.params.subscribe((params) => {
       this.id = params.id;
       this.getProduct();
     });
@@ -25,16 +25,19 @@ export class DetailComponent implements OnInit {
 
   getProduct() {
     this.requestProductById(this.id).subscribe(
-      data => {
+      (data) => {
         this.product = data;
-      }, err => {
+      },
+      (err) => {
         console.error(err);
       }
     );
   }
 
   requestProductById(id: string): Observable<Product> {
-    return this.httpClient.get(`/api/product/info/${id}`).pipe(map(data => this.dataAsProduct(data)));
+    return this.httpClient
+      .get(`/api/product/info/${id}`)
+      .pipe(map((data) => this.dataAsProduct(data)));
   }
 
   dataAsProduct(data: any): Product {
@@ -45,5 +48,4 @@ export class DetailComponent implements OnInit {
     product.description = data.description;
     return product;
   }
-
 }

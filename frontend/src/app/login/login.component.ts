@@ -4,16 +4,18 @@ import { AuthenticationService } from '../../auth/AuthenticationService';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-  constructor(private authService: AuthenticationService) { }
+  constructor(private authService: AuthenticationService) {}
 
   ngOnInit(): void {}
 
   login() {
-    const username = (document.getElementById('username') as HTMLInputElement).value;
-    const password = (document.getElementById('password') as HTMLInputElement).value;
+    const username = (document.getElementById('username') as HTMLInputElement)
+      .value;
+    const password = (document.getElementById('password') as HTMLInputElement)
+      .value;
     this.authService.login(username, password);
   }
 }

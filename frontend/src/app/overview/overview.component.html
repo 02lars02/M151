@@ -1,10 +1,9 @@
-  
 <div class="products">
     <div *ngFor="let product of products" class="card" [routerLink]="['/product', product.id]">
         <h4>{{product.productName}}</h4>
         <p>
             <span>
-                CHF {{product.price | number : '1.2-2'}} 
+                CHF {{product.price | number : '1.2-2'}}
             </span>
         </p>
     </div>

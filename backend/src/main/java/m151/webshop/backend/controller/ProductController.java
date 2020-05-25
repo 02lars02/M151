@@ -26,8 +26,8 @@ public class ProductController {
 
     @PostMapping("/add")
     @ResponseStatus(code = HttpStatus.OK)
-    public void add(@RequestBody Product fruit) {
-        productService.add(fruit);
+    public void add(@RequestBody Product product) {
+        productService.add(product);
     }
 
     @GetMapping("/delete/{id}")
