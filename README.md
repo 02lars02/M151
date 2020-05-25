@@ -52,3 +52,10 @@ Ordner: ~/backend
 ```
 ./gradlew bootRun
 ```
+
+### Frontend
+Ordner: ~/frontend
+```
+.npm install
+npm run start
+```
