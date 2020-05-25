@@ -1,1 +1,12 @@
-<p>detail works!</p>
+<div class="products">
+    <div>
+        <h1>{{product.productName}}</h1>
+        <p>{{product.description}}</p>
+        <p class="price">
+            <span>
+                CHF {{product.price | number : '1.2-2'}} 
+            </span>
+        </p>
+        <button [routerLink]="['']">Bestellen</button>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+  
+.products {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.card {
+    margin: 10px;
+    width: 250px;
+}

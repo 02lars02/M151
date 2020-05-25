@@ -1,0 +1,11 @@
+.products {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: large;
+}
+
+.price {
+    font-size: x-large;
+}
