@@ -56,6 +56,6 @@ Ordner: ~/backend
 ### Frontend
 Ordner: ~/frontend
 ```
-.npm install
+npm install
 npm run start
 ```
