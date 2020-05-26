@@ -25,7 +25,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.httpBasic().and().authorizeRequests() //
-                .antMatchers("/api/user/**", "/api/product/all", "/api/product/info/**").permitAll() //
+                .antMatchers("/api/user/**", "/api/product/all", "/api/product/info/**", "/api/order/**").permitAll() //
                 .antMatchers("/api/product/add", "/api/product/delete/**").hasRole("ADMIN") //
                 .antMatchers("/api/**").authenticated().and() //
                 .cors().disable().csrf().disable();
