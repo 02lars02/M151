@@ -11,7 +11,7 @@ Das Ziel dieses Projekts, ist das Erstellen eines Webshops für verschiedene Pro
 
 ### Persona
 #### Besucher
-Als Besuche möchte ich alle Produkte sehen, welche im Webshop verfügbar sind. Zudem kann sich ein Besucher als Kunde registrieren.
+Als Besucher möchte ich alle Produkte sehen, welche im Webshop verfügbar sind. Zudem kann sich ein Besucher als Kunde registrieren.
 #### Kunde 
 Als registrierter und eingeloggter Kunde möchte ich nicht nur die Produkte anschauen können, wie der Besucher, sondern ich möchte diese auch bestellen können.
 #### Verkäufer
@@ -19,7 +19,7 @@ Als eingeloggter Verkäufer möchte ich die Produkte verwalten können. Das heis
 
 ### User Stories
 #### Produkt anschauen
-Als Person möchte ich mir die aktuellen Produkte des Webshops anschauen können.
+Als Besucher möchte ich mir die aktuellen Produkte des Webshops anschauen können.
 #### Registrieren
 Als Besucher möchte ich mich registrieren, um danach als Kunde Produkte zu kaufen.
 #### Anmelden
