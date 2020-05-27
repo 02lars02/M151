@@ -14,7 +14,7 @@ export class AuthenticationService {
       }),
     };
     this.http.get('api/user/loginInfo', httpOptions).subscribe((res) => {
-      localStorage.setItem('currentUser', res.toString());
+      localStorage.setItem('currentUser', JSON.stringify(res));
     });
   }
 
