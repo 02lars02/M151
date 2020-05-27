@@ -62,7 +62,7 @@ public class User implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        List<GrantedAuthority> auths = Arrays.asList(new StringAuthority(userGroup.toString()));
+        List<GrantedAuthority> auths = Arrays.asList(new StringAuthority("ROLE_" + userGroup.toString()));
         return auths;
     }
 }
