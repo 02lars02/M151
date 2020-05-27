@@ -28,6 +28,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/api/user/**", "/api/product/all", "/api/product/info/**").permitAll() //
                 .antMatchers("/api/order/add").hasRole("CUSTOMER") //
                 .antMatchers("/api/product/add", "/api/product/delete/**", "api/order/all").hasRole("ADMIN") //
+                .antMatchers("/api/**").authenticated().and() //
                 .cors().disable().csrf().disable();
     }
 
