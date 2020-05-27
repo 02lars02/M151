@@ -14,7 +14,6 @@ export class AuthenticationService {
       }),
     };
     this.http.get('api/user/loginInfo', httpOptions).subscribe((res) => {
-      console.log(res);
       localStorage.setItem('currentUser', res.toString());
     });
   }
@@ -24,7 +23,6 @@ export class AuthenticationService {
     user.username = username;
     user.password = password;
     user.userGroup = 'CUSTOMER';
-    console.log(user);
     const header = new HttpHeaders();
     header.append('Content-Type', 'application/json');
     await this.http.post('/api/user/rergister', JSON.stringify(user), {
