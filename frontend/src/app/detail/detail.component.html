@@ -7,6 +7,6 @@
                 CHF {{product.price | number : '1.2-2'}}
             </span>
         </p>
-        <button [routerLink]="['']">Bestellen</button>
+        <button (click)="order()">Bestellen</button>
     </div>
 </div>
