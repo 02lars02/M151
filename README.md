@@ -5,6 +5,7 @@
    - [User Stories](#user-stories)
    - [Technologien](#technologien)
  - [Installation](#installation)
+- [Abfragen](#abfragen)
 
 ## Projektbeschrieb
 Das Ziel dieses Projekts, ist das Erstellen eines Webshops für verschiedene Produkte. Die Produkte können dabei von unterschiedlichen Produktgruppen kommen.
@@ -59,3 +60,8 @@ Ordner: ~/frontend
 npm install
 npm run start
 ```
+
+## Abfragen
+Für beispiel Abfragen habe ich ein File zur Verfügung gestellt, welches in das Programm Postman importiert werden kann.
+[File](M151_postman_collection.json)
+[Anleitung für Import in Postman (Extern)](https://kb.datamotion.com/?ht_kb=postman-instructions-for-exporting-and-importing)
