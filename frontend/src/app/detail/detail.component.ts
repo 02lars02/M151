@@ -16,7 +16,11 @@ export class DetailComponent implements OnInit {
   id: string;
   product: Product = new Product();
 
-  constructor(private route: ActivatedRoute, private httpClient: HttpClient, private router: Router) {}
+  constructor(
+    private route: ActivatedRoute,
+    private httpClient: HttpClient,
+    private router: Router
+  ) {}
 
   ngOnInit() {
     this.route.params.subscribe((params) => {
@@ -57,12 +61,15 @@ export class DetailComponent implements OnInit {
     const order: Order = new Order();
     order.userId = user.id;
     order.productId = this.product.id;
-    const header = new HttpHeaders();
-    header.append('Content-Type', 'application/json');
-    this.httpClient.post('/api/order/add', JSON.stringify(order), {
-      headers: header,
-    }).subscribe( res => {
-      this.router.navigate(['']);
+    const header = new HttpHeaders({
+      'Content-Type': 'application/json',
     });
+    this.httpClient
+      .post('/api/order/add', JSON.stringify(order), {
+        headers: header,
+      })
+      .subscribe((res) => {
+        this.router.navigate(['']);
+      });
   }
 }

@@ -18,14 +18,15 @@ export class AuthenticationService {
     });
   }
 
-  async register(username, password) {
+  register(username, password) {
     const user = new User();
     user.username = username;
     user.password = password;
     user.userGroup = 'CUSTOMER';
-    const header = new HttpHeaders();
-    header.append('Content-Type', 'application/json');
-    await this.http.post('/api/user/rergister', JSON.stringify(user), {
+    const header = new HttpHeaders({
+      'Content-Type': 'application/json',
+    });
+    this.http.post('/api/user/rergister', JSON.stringify(user), {
       headers: header,
     });
   }
