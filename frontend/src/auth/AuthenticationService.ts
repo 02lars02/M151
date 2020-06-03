@@ -26,9 +26,9 @@ export class AuthenticationService {
     const header = new HttpHeaders({
       'Content-Type': 'application/json',
     });
-    await this.http.post('/api/user/rergister', JSON.stringify(user), {
+    await this.http.post('/api/user/register', JSON.stringify(user), {
       headers: header,
-    });
+    }).subscribe();
   }
 
   logout() {
