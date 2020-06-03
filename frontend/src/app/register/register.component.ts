@@ -16,6 +16,10 @@ export class RegisterComponent implements OnInit {
       .value;
     const password = (document.getElementById('password') as HTMLInputElement)
       .value;
-    this.authService.register(username, password);
-  }
+      this.registerRequest(username, password).then(res => console.log(res));
+    }
+  
+    async registerRequest(username, password) {
+      await this.authService.register(username, password);
+    }
 }

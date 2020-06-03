@@ -6,19 +6,19 @@ import { User } from 'src/model/User';
 export class AuthenticationService {
   constructor(private http: HttpClient) {}
 
-  login(username, password) {
+  async login(username, password) {
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
         Authorization: 'Basic ' + btoa('' + username + ':' + password + ''),
       }),
     };
-    this.http.get('api/user/loginInfo', httpOptions).subscribe((res) => {
+    await this.http.get('api/user/loginInfo', httpOptions).subscribe((res) => {
       localStorage.setItem('currentUser', JSON.stringify(res));
     });
   }
 
-  register(username, password) {
+  async register(username, password) {
     const user = new User();
     user.username = username;
     user.password = password;
@@ -26,7 +26,7 @@ export class AuthenticationService {
     const header = new HttpHeaders({
       'Content-Type': 'application/json',
     });
-    this.http.post('/api/user/rergister', JSON.stringify(user), {
+    await this.http.post('/api/user/rergister', JSON.stringify(user), {
       headers: header,
     });
   }

@@ -16,6 +16,10 @@ export class LoginComponent implements OnInit {
       .value;
     const password = (document.getElementById('password') as HTMLInputElement)
       .value;
-    this.authService.login(username, password);
+    this.loginReguest(username, password).then(res => console.log(res));
+  }
+
+  async loginReguest(username, password) {
+    await this.authService.login(username, password);
   }
 }
