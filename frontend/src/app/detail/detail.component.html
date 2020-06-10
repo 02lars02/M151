@@ -7,6 +7,7 @@
                 CHF {{product.price | number : '1.2-2'}}
             </span>
         </p>
-        <button (click)="order()">Bestellen</button>
+        <button (click)="order()" *ngIf="isCustomer">Bestellen</button>
+        <button (click)="delete()" *ngIf="isAdmin">Löschen</button>
     </div>
 </div>

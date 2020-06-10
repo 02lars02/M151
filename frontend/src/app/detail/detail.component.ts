@@ -15,6 +15,8 @@ import { Order } from 'src/model/Order';
 export class DetailComponent implements OnInit {
   id: string;
   product: Product = new Product();
+  isAdmin = false;
+  isCustomer = false;
 
   constructor(
     private route: ActivatedRoute,
@@ -27,6 +29,13 @@ export class DetailComponent implements OnInit {
       this.id = params.id;
       this.getProduct();
     });
+    const user = JSON.parse(localStorage.getItem('currentUser'));
+    if (user.userGroup === 'CUSTOMER') {
+      this.isCustomer = true;
+    }
+    if (user.userGroup === 'ADMIN') {
+      this.isAdmin = true;
+    }
   }
 
   getProduct() {
@@ -71,5 +80,11 @@ export class DetailComponent implements OnInit {
       .subscribe((res) => {
         this.router.navigate(['']);
       });
+  }
+
+  delete() {
+    this.httpClient.get('/api/order/delete/' + this.id).subscribe((res) => {
+      this.router.navigate(['']);
+    });
   }
 }
