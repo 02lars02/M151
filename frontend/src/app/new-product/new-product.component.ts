@@ -18,7 +18,7 @@ export class NewProductComponent implements OnInit {
 
   add() {
     const product = new Product();
-    product.name = (document.getElementById('title') as HTMLInputElement).value;
+    product.name = (document.getElementById('name') as HTMLInputElement).value;
     product.description = (document.getElementById('description') as HTMLInputElement).value;
     product.price = Number((document.getElementById('price') as HTMLInputElement).value);
     this.request(product).then(() => this.router.navigate(['']));
