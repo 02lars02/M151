@@ -38,7 +38,7 @@ export class OverviewComponent implements OnInit {
   private dataToProduct(data: any): Product {
     const product = new Product();
     product.id = data.id;
-    product.productName = data.name;
+    product.name = data.name;
     product.price = data.price;
     product.description = data.description;
     return product;

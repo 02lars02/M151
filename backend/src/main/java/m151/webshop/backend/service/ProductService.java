@@ -24,7 +24,7 @@ public class ProductService {
 
     public Product getInfo(int id) { return productRepo.findById(id); }
 
-    public void add(Product fruit) { productRepo.save(fruit); }
+    public void add(Product product) { productRepo.save(product); }
 
     public void delete(int id) { productRepo.deleteById(id); }
 }
