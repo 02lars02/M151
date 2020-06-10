@@ -83,7 +83,13 @@ export class DetailComponent implements OnInit {
   }
 
   delete() {
-    this.httpClient.get('/api/order/delete/' + this.id).subscribe((res) => {
+    const user: User = JSON.parse(localStorage.getItem('currentUser'));
+    const header = new HttpHeaders({
+      Authorization: 'Basic ' + btoa('' + user.username + ':' + user.password + '')
+    });
+    this.httpClient.get('/api/order/delete/' + this.id, {
+      headers: header,
+    }).subscribe((res) => {
       this.router.navigate(['']);
     });
   }
