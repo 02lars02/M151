@@ -29,8 +29,6 @@ Als Kunde möchte ich mich anmelden, um danach Produkte kaufen zu können.
 Als Kunde möchte ich die aktuellen Produkte bestellen können.
 #### Produkt hinzufügen
 Als Verkäufer möchte ich neue Produkte zum Webshop hinzufügen.
-#### Produkt bearbeiten
-Als Verkäufer möchte ich bestehende Produkte bearbeiten können, um die Werte zu aktualisieren.
 #### Produkt löschen
 Als Verkäufer möchte ich Produkte löschen, dass diese nicht mehr verfügbar sind und somit vom Kunden nicht mehr bestellt werden können.
 
