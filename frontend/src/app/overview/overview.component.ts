@@ -11,11 +11,16 @@ import { Observable } from 'rxjs';
 })
 export class OverviewComponent implements OnInit {
   products: Product[];
+  isAdmin = false;
 
   constructor(private httpClient: HttpClient) {}
 
   ngOnInit() {
     this.getProducts().subscribe((products) => (this.products = products));
+    const user = JSON.parse(localStorage.getItem('currentUser'));
+    if (user.userGroup === 'ADMIN') {
+      this.isAdmin = true;
+    }
   }
 
   private getProducts(): Observable<Product[]> {

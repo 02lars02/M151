@@ -9,6 +9,7 @@ import { RegisterComponent } from './register/register.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthenticationService } from 'src/auth/AuthenticationService';
+import { NewProductComponent } from './new-product/new-product.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { AuthenticationService } from 'src/auth/AuthenticationService';
     DetailComponent,
     LoginComponent,
     RegisterComponent,
+    NewProductComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [AuthenticationService],
