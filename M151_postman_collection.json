@@ -6,7 +6,44 @@
 	},
 	"item": [
 		{
-			"name": "M151_registerUser",
+			"name": "M151_registerUser_customer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"test1\",\n\t\"password\": \"test\",\n\t\"userGroup\": \"CUSTOMER\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "M151_registerUser_admin",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -19,7 +56,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"username\": \"test25\",\n\t\"password\": \"test\",\n\t\"userGroup\": \"CUSTOMER\"\n}",
+					"raw": "{\n\t\"username\": \"admin\",\n\t\"password\": \"admin\",\n\t\"userGroup\": \"ADMIN\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -50,7 +87,7 @@
 					"basic": [
 						{
 							"key": "username",
-							"value": "test26",
+							"value": "test1",
 							"type": "string"
 						},
 						{
@@ -106,7 +143,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"name\": \"Produkt6\",\n\t\"description\": \"Beschreibung des Produkt6\",\n\t\"price\": 100.20\n}"
+					"raw": "{\n\t\"name\": \"Produkt1\",\n\t\"description\": \"Beschreibung des Produkt1\",\n\t\"price\": 10.20\n}"
 				},
 				"url": {
 					"raw": "http://localhost:8080/api/product/add",
@@ -170,10 +207,25 @@
 		{
 			"name": "M151_deleteProduct",
 			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/product/delete/14",
+					"raw": "http://localhost:8080/api/product/delete/29",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -183,7 +235,7 @@
 						"api",
 						"product",
 						"delete",
-						"14"
+						"29"
 					]
 				}
 			},
@@ -233,7 +285,7 @@
 					"basic": [
 						{
 							"key": "username",
-							"value": "test25",
+							"value": "test1",
 							"type": "string"
 						},
 						{
@@ -253,7 +305,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"userId\": 1,\n\t\"productId\": 1\n}"
+					"raw": "{\n\t\"userId\": 2,\n\t\"productId\": 2\n}"
 				},
 				"url": {
 					"raw": "http://localhost:8080/api/order/add",
