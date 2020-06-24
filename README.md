@@ -16,7 +16,7 @@ Als Besucher möchte ich alle Produkte sehen, welche im Webshop verfügbar sind.
 #### Kunde 
 Als registrierter und eingeloggter Kunde möchte ich nicht nur die Produkte anschauen können, wie der Besucher, sondern ich möchte diese auch bestellen können.
 #### Verkäufer
-Als eingeloggter Verkäufer möchte ich die Produkte verwalten können. Das heisst neu Produkte erstellen oder Werte der bestehenden Produkte ändern.
+Als eingeloggter Verkäufer möchte ich die Produkte verwalten können. Das heisst neu Produkte erstellen oder bestehenden Produkte löschen.
 
 ### User Stories
 #### Produkt anschauen
